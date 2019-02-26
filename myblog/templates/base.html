@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -9,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{%block title%}{%endblock%} | 멋사</title>
     <link rel="stylesheet" href="{%static 'css/semantic.min.css'%}" />
-    <!-- <link rel="stylesheet" href="{%static 'css/icon.min.css'%}" /> -->
     <link rel="stylesheet" href="{%static 'css/styles.css'%}" />
 </head>
 
@@ -18,11 +17,11 @@
         <section class="ui text container mt-2">
             <a class="ui center aligned icon header" href="{%url 'root'%}">
                 <i class="compass outline loading icon"></i>
-                <p class="jalnan">고장난 나침반</p>
+                <p class="">고장난 나침반</p>
             </a>
         </section>
     </header>
-    <p class="ui text yg-jalnan">안녕</p>
+    <!-- <p class="ui text">안녕</p> -->
     {%block content%}{%endblock%}
 
     <script src="{%static 'js/semantic.min.js'%}"></script>

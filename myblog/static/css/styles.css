@@ -19,7 +19,6 @@
     padding-bottom: 1rem;
 }
 
-
 .main.menu {
     background-color: white !important;
     transition: box-shadow 0.1s, 0.1s, 0.1s, 0.1s;
@@ -35,5 +34,5 @@
 }
 
 .ui.action.input input[type="file"] {
-  display: none;
+    display: none;
 }

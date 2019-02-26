@@ -1,7 +1,11 @@
 $(document).ready(function () {
-    $('.main.menu').visibility({
-        type: 'fixed'
-    });
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) {
+            $('.main.menu').visibility({
+                type: 'fixed'
+            });
+        }
+    }).resize();
 
     $("input:text").click(function () {
         $(this).parent().find("input:file").click();
@@ -11,4 +15,6 @@ $(document).ready(function () {
         var name = e.target.files[0].name;
         $('input:text', $(e.target).parent()).val(name);
     });
+
+    $('.ui.dropdown').dropdown();
 });
