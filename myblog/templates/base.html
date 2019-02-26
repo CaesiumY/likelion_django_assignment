@@ -4,14 +4,26 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{%block title%}{%endblock%} | 멋사</title>
-    <link rel="stylesheet" href="{%static 'css/semantic.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/semantic.min.css'%}" />
 </head>
 
 <body>
+    <header>
+        <h2 class="ui icon header">
+            <i class="settings icon"></i>
+            <div class="content">
+                Account Settings
+                <div class="sub header">
+                    Manage your account settings and set e-mail preferences.
+                </div>
+            </div>
+        </h2>
+    </header>
+    {%block content%}{%endblock%}
 
     <script src="{%static 'js/semantic.min.js'%}"></script>
     <script src="{%static 'js/jquery-3.1.1.min.js'%}"></script>
