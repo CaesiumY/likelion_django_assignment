@@ -52,6 +52,10 @@ body,
     font-family: 'Noto Serif CJK KR', serif;
 }
 
-a {
+a,
+span,
+div,
+input,
+h1 {
     font-family: 'yg-jalnan', serif !important;
 }
