@@ -8,11 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{%block title%}{%endblock%} | 멋사</title>
+    <!-- 임시 아이콘 -->
+    <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://phinf.pstatic.net/contact/20180818_19/15345325429086Dm26_JPEG/image.jpg?type=s160">
     <link rel="stylesheet" href="{%static 'css/semantic.min.css'%}" />
     <link rel="stylesheet" href="{%static 'css/styles.css'%}" />
 </head>
 
 <body>
+    <!-- 아이콘 헤더 -->
     <header>
         <section class="ui text container mt-2">
             <a class="ui center aligned icon header" href="{%url 'root'%}">
@@ -20,12 +23,50 @@
                 <p class="">고장난 나침반</p>
             </a>
         </section>
+
+        <!-- 네비게이션 바 -->
+        <nav class="ui secondary stackable main menu py-1">
+            <div class="ui text container">
+                <a href="" class="{% block root_class %}{% endblock %} item"><i class="world icon"></i>홈</a>
+                <a href="" class="{% block blog_class %}{% endblock %} item"><i class="book icon"></i>블로그</a>
+                <a href="" class="{% block gallery_class %}{% endblock %} item"><i class="images outline icon"></i>갤러리</a>
+                <a href="" class=" item"><i class="file pdf icon"></i>수료증</a>
+                <div class="ui dropdown item">
+                    <span class="text"><i class="user icon"></i>사용자</span>
+                    <i class="ui dropdown icon"></i>
+                    <div class="menu">
+                        <!-- 로그인 했을 경우 -->
+                        {% if user.is_authenticated %}
+                        <div class="item" onClick="javascript:{document.getElementById('logout').submit()}">로그아웃
+                            <form action="{% url " accounts:logout" %}" method="POST" id="logout">
+                                {% csrf_token %}
+                                <input type="hidden">
+                            </form>
+                        </div>
+                        <!-- 안 했을 경우 -->
+                        {% else %}
+                        <a class="item" href="">로그인</a>
+                        <a class="item" href="">회원가입</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="right menu">
+                    <div class="item">
+                        <div class="ui transparent icon input">
+                            <input type="text" placeholder="검색하기">
+                            <i class="search link icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-    <!-- <p class="ui text">안녕</p> -->
+
     {%block content%}{%endblock%}
 
-    <script src="{%static 'js/semantic.min.js'%}"></script>
     <script src="{%static 'js/jquery-3.1.1.min.js'%}"></script>
+    <script src="{%static 'js/semantic.min.js'%}"></script>
+    <script src="{%static 'js/styles.js'%}"></script>
 </body>
 
 </html>
