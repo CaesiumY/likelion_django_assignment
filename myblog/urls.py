@@ -22,5 +22,7 @@ from django.shortcuts import redirect
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls', namespace='blog')),
+    path('accounts/', include('accounts.urls', namespace='accounts')),
+    path('portfolio/', include('portfolio.urls', namespace='portfolio')),
     path('', lambda r: redirect('blog:home'), name='root'),
 ]
