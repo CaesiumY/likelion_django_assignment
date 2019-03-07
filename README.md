@@ -16,7 +16,7 @@
 - [ ] 검색 구현
 - [ ] API 사용
 
-- [ ] heroku에 배포하기!
+- [x] [heroku에 배포하기!](https://mutsa-jbnu.herokuapp.com/blog/)
 
 ## 디자인 구현
 
