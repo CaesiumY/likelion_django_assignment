@@ -9,14 +9,14 @@
 - [ ] [기본적인 블로그 CRUD](https://github.com/CaesiumY/likelion_django_assignment/tree/master/blog)
 - [ ] 페이지네이션
 - [ ] 다음 글, 이전 글 구현
-- [ ] 로그인 관련
+- [x] [로그인 관련](https://github.com/CaesiumY/likelion_django_assignment/tree/master/accounts)
 - [ ] 소셜 로그인
 - [ ] 미디어 업로드
 - [ ] 댓글 기능
 - [ ] 검색 구현
 - [ ] API 사용
 
-- [ ] PythonAnywhere에 배포하기!
+- [ ] heroku에 배포하기!
 
 ## 디자인 구현
 
