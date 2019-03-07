@@ -7,4 +7,9 @@ from .models import Post
 
 
 def home_view(request):
-    return render(request, 'home.html')
+    posts = Post.objects.all()
+    paginator = Paginator(posts, 8)
+    page = request.GET.get('page')
+    page_posts = paginator.get_page(page)
+
+    return render(request, 'home.html', {'page_posts': page_posts})
