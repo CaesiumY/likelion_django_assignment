@@ -14,5 +14,21 @@
     {%endif%}
 
 
+    <div class="ui header">로그인</div>
+    <form class="ui form">
+        {% csrf_token %}
+        <div class="field">
+            <label>이름</label>
+            <input type="text" name="username" placeholder="이름">
+        </div>
+        <div class="field">
+            <label>비밀번호</label>
+            <input type="password" name="password" placeholder="비밀번호">
+        </div>
+        <button class="ui button" type="submit">
+            <div>로그인</div>
+        </button>
+    </form>
+
 </main>
 {%endblock%}

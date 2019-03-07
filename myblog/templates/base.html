@@ -30,7 +30,7 @@
                 <a href="{%url 'blog:home'%}" class="{% block item_home %}{% endblock %} item"><i class="world icon"></i>홈</a>
                 <a href="{%url 'blog:home'%}" class="{% block item_blog %}{% endblock %} item"><i class="book icon"></i>블로그</a>
                 <a href="{%url 'portfolio:portfolio'%}" class="{% block item_portfolio %}{% endblock %} item"><i class="images outline icon"></i>포트폴리오</a>
-                <a href="" class=" item"><i class="file pdf icon"></i>수료증</a>
+                <!-- <a href="" class=" item"><i class="file pdf icon"></i>수료증</a> -->
                 <div class="ui dropdown item">
                     <span class="text"><i class="user icon"></i>사용자</span>
                     <i class="ui dropdown icon"></i>
@@ -38,7 +38,7 @@
                         <!-- 로그인 했을 경우 -->
                         {% if user.is_authenticated %}
                         <div class="item" onClick="javascript:{document.getElementById('logout').submit()}">로그아웃
-                            <form action="{% url " accounts:logout" %}" method="POST" id="logout">
+                            <form action="{% url 'accounts:logout' %}" method="POST" id="logout">
                                 {% csrf_token %}
                                 <input type="hidden">
                             </form>
@@ -64,7 +64,8 @@
 
     {%block content%}{%endblock%}
 
-    <footer class="ui vertical footer segment">
+    <footer class="ui vertical footer">
+        <!-- <hr /> -->
         <section class="ui center aligned container">
             <div class="ui horizontal small divided link list">
                 <h3><a target="_blank" class="item" href="https://github.com/CaesiumY/likelion_django_assignment"><i
