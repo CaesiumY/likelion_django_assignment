@@ -30,7 +30,7 @@
 
     <section class="ui">
         <div class="three ui buttons">
-            <a href="{%url 'blog:detail' post.id|add:'-1'%}" class="ui labeled icon button">
+            <a href="{%url 'blog:detail' post.id|add:'-1'%}" class="ui labeled icon {%if post.get_next_by_created_at %}disabled{%endif%} button">
                 <i class="left chevron icon"></i>
                 이전
             </a>
@@ -38,7 +38,7 @@
                 <i class="list icon"></i>
                 목록
             </a>
-            <a href="{%url 'blog:detail' post.id|add:'1'%}" class="ui right labeled icon button">
+            <a href="{%url 'blog:detail' post.id|add:'1'%}" class="ui right labeled icon {%if post.get_previous_by_created_at %}disabled{%endif%} button">
                 <i class="right chevron icon"></i>
                 다음
             </a>
