@@ -57,6 +57,7 @@ span,
 div,
 input,
 h1,
-button {
+button,
+p {
     font-family: 'yg-jalnan', serif !important;
 }

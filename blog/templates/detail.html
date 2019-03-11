@@ -1,8 +1,48 @@
 {%extends 'base.html'%}
 
-{%block title%}블로그{%endblock%}
+{%block title%}{{post.title}}{%endblock%}
 {%block item_blog%}active{%endblock%}
 
 {%block content%}
-<h1>detail</h1>
+<main class="ui text container">
+    <h1 class="ui dividing huge header">{{post.title}}
+        <div class="ui list">
+            <div class="sub header item"><i class="user icon"></i>작성자: {{post.author}}</div>
+            <div class="ui sub header item">작성일: {{post.created_at}}</div>
+            <div class="ui sub header item">수정일: {{post.updated_at}}</div>
+        </div>
+    </h1>
+
+    <section class="ui text container my-2">
+        <span class="ui block">{{post.content|linebreaks}}</span>
+    </section>
+
+    {%if user.is_authenticated%}
+    <section class="ui my-2">
+        <a href="" class="ui labeled icon basic button">
+            <i class="edit icon"></i>글 수정
+        </a>
+        <a href="" class="ui labeled red icon basic button ">
+            <i class="eraser icon"></i>글 삭제
+        </a>
+    </section>
+    {%endif%}
+
+    <section class="ui">
+        <div class="three ui buttons">
+            <a href="{%url 'blog:detail' post.id|add:'-1'%}" class="ui labeled icon button">
+                <i class="left chevron icon"></i>
+                이전
+            </a>
+            <a href="{%url 'blog:home'%}" class="ui button">
+                <i class="list icon"></i>
+                목록
+            </a>
+            <a href="{%url 'blog:detail' post.id|add:'1'%}" class="ui right labeled icon button">
+                <i class="right chevron icon"></i>
+                다음
+            </a>
+        </div>
+    </section>
+</main>
 {%endblock%}
