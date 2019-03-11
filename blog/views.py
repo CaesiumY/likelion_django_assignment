@@ -13,3 +13,9 @@ def home_view(request):
     page_posts = paginator.get_page(page)
 
     return render(request, 'home.html', {'page_posts': page_posts})
+
+
+def detail_view(request, id):
+    post = get_object_or_404(Post, pk=id)
+
+    return render(request, 'detail.html', {'post': post})

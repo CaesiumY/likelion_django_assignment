@@ -8,17 +8,17 @@
     <section class="ui stackable four column grid grid">
         {% for post in page_posts %}
         <div class="column">
-            <a class="ui fluid card" href="">
+            <a class="ui fluid card" href="{%url 'blog:detail' post.id%}">
                 <div class="content">
                     <div class="header">{{ post.title }}</div>
-                    <div class="meta">{{ post.published_at }}</div>
+                    <div class="meta small">{{ post.created_at }}</div>
                     <div class="description">
                         <p>{{ post.summary }}</p>
                     </div>
                 </div>
                 <div class="extra content">
                     <!-- <i class="eye icon"></i>121 조회수 -->
-                    더보기
+                    <span class="text"><i class="user icon"></i>{{post.author}}</span>
                 </div>
             </a>
         </div>
