@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%block title%}새 글 쓰기{%endblock%}
+{%block item_blog%}active{%endblock%}
+
+{%block content%}
+
+<main class="ui text container">
+    <form class="ui form" action="" method="post">
+        {%csrf_token%}
+        <div class="field">
+            <label for="">제목</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div class="field">
+            <label for="">내용</label>
+            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <input class="ui button" type="submit" value="글 쓰기">
+    </form>
+</main>
+
+{%endblock%}

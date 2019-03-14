@@ -19,3 +19,7 @@ def detail_view(request, id):
     post = get_object_or_404(Post, pk=id)
 
     return render(request, 'detail.html', {'post': post})
+
+
+def new_view(request):
+    return render(request, 'new.html')
