@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.core.paginator import Paginator
+from django.contrib.auth.models import User
 from .models import Post
 
 # Create your views here.
@@ -24,7 +25,7 @@ def detail_view(request, id):
 def new_view(request):
     if request.method == 'POST':
         post = Post()
-        # post.author =
+        post.author = request.user
         post.title = request.POST['title']
         post.content = request.POST['content']
         post.created_at = timezone.datetime.now()
