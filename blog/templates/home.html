@@ -25,7 +25,6 @@
         {% endfor %}
     </section>
 
-    {% if user.is_authenticated %}
     <section class="ui right aligned container my-2">
         <a class="ui right labeled icon button" href="{%url 'blog:new'%}">
             <i class="pencil alternate icon"></i>새 글 쓰기
@@ -34,7 +33,6 @@
             <i class="clipboard icon"></i>사이트 관리
         </a>
     </section>
-    {% endif %}
 
     <section class="ui center aligned container">
         <div class="ui buttons">
