@@ -5,15 +5,15 @@
 {%block content%}
 
 <main class="ui text container">
-    <form class="ui form" action="" method="post">
+    <form class="ui form" action="" method="POST">
         {%csrf_token%}
         <div class="field">
             <label for="">제목</label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title">
         </div>
         <div class="field">
             <label for="">내용</label>
-            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            <textarea name="content" id="content"></textarea>
         </div>
         <input class="ui button" type="submit" value="글 쓰기">
     </form>

@@ -22,4 +22,13 @@ def detail_view(request, id):
 
 
 def new_view(request):
+    if request.method == 'POST':
+        post = Post()
+        # post.author =
+        post.title = request.POST['title']
+        post.content = request.POST['content']
+        post.created_at = timezone.datetime.now()
+        # post.updated_at = timezone.datetime.now()
+        post.save()
+        return redirect('/blog/detail/'+str(post.id))
     return render(request, 'new.html')
