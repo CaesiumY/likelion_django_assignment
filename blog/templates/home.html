@@ -26,9 +26,11 @@
     </section>
 
     <section class="ui right aligned container my-2">
+        {% if user.is_authenticated %}
         <a class="ui right labeled icon button" href="{%url 'blog:new'%}">
             <i class="pencil alternate icon"></i>새 글 쓰기
         </a>
+        {%endif%}
         <a class="ui right labeled icon green button" href="/admin/">
             <i class="clipboard icon"></i>사이트 관리
         </a>
