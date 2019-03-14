@@ -16,5 +16,7 @@ $(document).ready(function () {
         $('input:text', $(e.target).parent()).val(name);
     });
 
-    $('.ui.dropdown').dropdown();
+    $('.close').on('click', function () {
+        $(this).closest('.message').transition('fade');
+    });
 });
