@@ -15,7 +15,7 @@ def login_view(request):
             return redirect('blog:home')
         else:
             return render(request, 'login.html', {'error': '이름 또는 비밀번호가 잘못되었습니다.'})
-    return render(request, 'login.html',  {'error': '인증방식이 잘못되었습니다.'})
+    return render(request, 'login.html')
 
 
 def signup_view(request):
