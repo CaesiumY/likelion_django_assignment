@@ -33,3 +33,9 @@ def new_view(request):
         post.save()
         return redirect('/blog/detail/'+str(post.id))
     return render(request, 'new.html')
+
+
+def delete_view(request, id):
+    post = Post.objects.get(pk=id)
+    post.delete()
+    return redirect('/blog/')
