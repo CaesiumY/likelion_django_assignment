@@ -37,5 +37,7 @@ def new_view(request):
 
 def delete_view(request, id):
     post = Post.objects.get(pk=id)
-    post.delete()
-    return redirect('/blog/')
+    if post.author == request.user:
+        post.delete()
+        return redirect('/blog/')
+    return render(request, 'detail.html', {'post': post, 'error': '본인 글만 삭제할 수 있습니다.'})

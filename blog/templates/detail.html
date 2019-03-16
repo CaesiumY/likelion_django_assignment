@@ -4,6 +4,13 @@
 
 {%block content%}
 <main class="ui text container">
+    {%if error%}
+    <div class="ui negative message">
+        <i class="close icon"></i>
+        <div class="header">오류가 발생했습니다.</div>
+        <p>{{error}}</p>
+    </div>
+    {%endif%}
     <h1 class="ui dividing huge header">{{post.title}}
         <div class="ui list">
             <div class="sub header item"><i class="user icon"></i>작성자: {{post.author}}</div>
