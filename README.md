@@ -6,10 +6,12 @@
 
 ## ~~추가된~~ 추가할 여러 기능
 
-- [ ] [기본적인 블로그 CRUD](https://github.com/CaesiumY/likelion_django_assignment/tree/master/blog)
+- [x] [기본적인 블로그 CRUD](https://github.com/CaesiumY/likelion_django_assignment/tree/master/blog)
 - [x] 페이지네이션
 - [x] 다음 글, 이전 글 구현
 - [x] [로그인 관련](https://github.com/CaesiumY/likelion_django_assignment/tree/master/accounts)
+- [ ] forms 업그레이드
+- [ ] 향상된 로그인 -> 클래스기반 view 사용
 - [ ] 소셜 로그인
 - [ ] 미디어 업로드
 - [ ] 댓글 기능
