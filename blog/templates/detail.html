@@ -25,7 +25,7 @@
 
     {%if user.is_authenticated%}
     <section class="ui my-2">
-        <a href="" class="ui labeled icon basic button">
+        <a href="{%url 'blog:edit' post.id%}" class="ui labeled icon basic button">
             <i class="edit icon"></i>글 수정
         </a>
         <a href="{%url 'blog:delete' post.id%}" class="ui labeled red icon basic button ">
