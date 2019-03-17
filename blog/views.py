@@ -41,3 +41,17 @@ def delete_view(request, id):
         post.delete()
         return redirect('/blog/')
     return render(request, 'detail.html', {'post': post, 'error': '본인 글만 삭제할 수 있습니다.'})
+
+
+def edit_view(request, id):
+    post = Post.objects.get(pk=id)
+
+    if request.method == 'POST':
+        post.author = request.user
+        post.title = request.POST['title']
+        post.content = request.POST['content']
+        post.updated_at = timezone.datetime.now()
+        post.save()
+        return redirect('/blog/detail/'+str(post.id))
+
+    return render(request, 'edit.html', {'post': post})
