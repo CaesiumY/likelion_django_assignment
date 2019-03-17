@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%block title%} {{post.title}} 수정하기{%endblock%}
+{%block item_blog%}active{%endblock%}
+
+{%block content%}
+
+<main class="ui text container">
+    <form class="ui form" action="" method="POST">
+        {%csrf_token%}
+        <div class="field">
+            <label for="">제목</label>
+            <input type="text" name="title" value="{{post.title}}">
+        </div>
+        <div class="field">
+            <label for="">내용</label>
+            <textarea name="content" id="content">{{post.content}}</textarea>
+        </div>
+        <input class="ui button" type="submit" value="글 수정하기">
+    </form>
+</main>
+
+{%endblock%}
