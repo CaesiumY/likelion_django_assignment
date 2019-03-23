@@ -22,4 +22,9 @@ $(document).ready(function () {
 
     $('.ui.dropdown')
         .dropdown();
+
+    $('.right.menu.open').on("click", function (e) {
+        e.preventDefault();
+        $('.ui.vertical.menu').toggle();
+    });
 });

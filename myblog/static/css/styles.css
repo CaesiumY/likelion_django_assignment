@@ -36,3 +36,9 @@
 .ui.action.input input[type="file"] {
     display: none;
 }
+
+.ui.vertical.menu {
+    margin-top: -15px !important;
+    width: 100%;
+    display: none;
+}
