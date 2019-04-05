@@ -10,6 +10,7 @@
 - [x] 페이지네이션
 - [x] 다음 글, 이전 글 구현
 - [x] [로그인 관련](https://github.com/CaesiumY/likelion_django_assignment/tree/master/accounts)
+- [x] 자신의 글만 수정 / 삭제 가능
 - [ ] forms 업그레이드
 - [ ] 향상된 로그인 -> 클래스기반 view 사용
 - [ ] 소셜 로그인
