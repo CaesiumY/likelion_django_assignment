@@ -28,3 +28,6 @@ $(document).ready(function () {
         $('.ui.vertical.menu').toggle();
     });
 });
+
+console.log('js 내부에서:')
+console.log(i_now)
