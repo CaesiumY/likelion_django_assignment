@@ -4,6 +4,8 @@
 
 <br>
 
+![likelionjbnu](https://img.shields.io/badge/LikeLion-JBNU-orange.svg)
+
 ## ~~추가된~~ 추가할 여러 기능
 
 - [x] [기본적인 블로그 CRUD](https://github.com/CaesiumY/likelion_django_assignment/tree/master/blog)
